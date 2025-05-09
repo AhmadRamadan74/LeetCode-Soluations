@@ -17,7 +17,5 @@ var createCounter = function(init) {
         }
     };
     let ans = createCounter(5);
-    console.log(ans.increment()); 
-    console.log(ans.reset());      
-    console.log(ans.decrement()); 
+    console.log(ans.increment()),  console.log(ans.reset()), console.log(ans.decrement()); 
 };
