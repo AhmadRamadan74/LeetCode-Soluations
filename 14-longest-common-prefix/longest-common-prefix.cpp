@@ -7,7 +7,7 @@ public:
         string i = strs[0], j = strs[strs.size() - 1];
         for (int u = 0; u < min(i.size() , j.size()); u++) {
             if (i[u] != j[u]) return ans;
-            ans += i[u];
+            ans += j[u];
         }
         return ans;
     }
