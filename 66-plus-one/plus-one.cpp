@@ -1,15 +1,15 @@
 class Solution {
 public:
-    vector<int> plusOne(vector<int>& digits) {
-        int n = digits.size() - 1;
-        for(int i = n; i >= 0; i--){
-            if(digits[i] < 9) {
-                digits[i]++;
-                return digits;
+    vector<int> plusOne(vector<int>& arr) {
+        int n = arr.size() - 1;
+        for(int i = n; i >= 0; i--) {
+            if(arr[i] < 9) {
+                arr[i]++;
+                return arr;
             }
-            digits[i] = 0;
+            arr[i] = 0;
         }
-        digits.insert(digits.begin(), 1);
-        return digits;
+        arr.insert(arr.begin(), 1);
+        return arr;
     }
 };
