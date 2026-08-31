@@ -1,15 +1,10 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& arr) {
-        map<int , int>mp;
-        bool flag = false;
-        for(auto i : arr) {
-            mp[i]++;
-            if(mp[i] > 1){
-                flag = true;
-                break;
-            }
+        sort(arr.begin(), arr.end());
+        for(int i = 0; i < arr.size() - 1; i++) {
+            if(arr[i] == arr[i + 1]) return true;
         }
-        return flag;
+        return false;
     }
 };
