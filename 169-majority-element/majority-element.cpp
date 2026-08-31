@@ -1,12 +1,12 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
-        int n = nums.size();
-        map<int,int>freq;
-        for(auto i : nums) freq[i]++;
-        for(auto i : nums){
-            if(freq[i] > n / 2) return i;
+    int majorityElement(vector<int>& arr) {
+        int n = ceil(arr.size() / 2);
+        map<int, int>mp;
+        for(auto i : arr) mp[i]++;
+        for(auto i : arr) {
+            if(mp[i] > n) return i;
         }
-        return {};   
+        return 0;
     }
 };
