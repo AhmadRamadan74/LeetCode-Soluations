@@ -4,10 +4,13 @@ public:
         vector<int>ind;
         int c = 0;
         for(auto i: words) {
-           if(i.find(x) != string :: npos){
+          for(auto j: i) {
+            if(j == x) {
                 ind.push_back(c);
-           }
-           c++;
+                break;
+            }
+          }
+          c++;
         }
         return ind;
     }
